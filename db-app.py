@@ -14,6 +14,13 @@ Helper function used to facilitate the execution of commands on the psql server
 def executeQuery(db_query):
     DB_CURS.execute(db_query)
 
+    print("Query complete. Printing result(s)...\n")
+    try: # Try to retriev a response
+        for result in DB_CURS.fetchall():
+            print(result)
+    except: # Handle no response
+        print("No response was provided.")
+
 """
 Retrieves and displays all records from the students table.
 """
@@ -56,7 +63,7 @@ def promptArguments(argumentList):
 
     outputList = []
     for argument in argumentList:
-        outputList += input(argument + ": ")
+        outputList += [input(argument + ": ")]
     
     print("All arguments have been collected. Continuing...")
     print(ASTERISK_STRING)
