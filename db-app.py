@@ -80,26 +80,26 @@ if __name__ == '__main__':
 
         user_input = input()
 
-        if user_input is "1":
+        if (user_input == "1"):
             getAllStudents()
 
             print(ASTERISK_STRING)
-        elif user_input is "2":
+        elif (user_input == "2"):
             input_arguments = promptArguments(["first_name", "last_name", "email", "enrollment_date"])
             addStudent(input_arguments[0], input_arguments[1], input_arguments[2], input_arguments[3])
 
             print(ASTERISK_STRING)
-        elif user_input is "3":
+        elif (user_input == "3"):
             input_arguments = promptArguments(["student_id", "new_email"])
             updateStudentEmail(input_arguments[0], input_arguments[1])
 
             print(ASTERISK_STRING)
-        elif user_input is "4":
+        elif (user_input == "4"):
             input_arguments = promptArguments(["student_id"])
             deleteStudent(input_arguments[0])
 
             print(ASTERISK_STRING)
-        elif user_input is "q":
+        elif (user_input == "q"):
             print("Quitting program...")
             user_has_quit = True
 
