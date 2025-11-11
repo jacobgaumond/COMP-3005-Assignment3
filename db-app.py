@@ -15,11 +15,14 @@ def executeQuery(db_query):
     DB_CURS.execute(db_query)
 
     print("Query complete. Printing result(s)...\n")
-    try: # Try to retriev a response
+    try: # Try to retrieve a response
         for result in DB_CURS.fetchall():
             print(result)
     except: # Handle no response
         print("No response was provided.")
+
+    # Ripple changes out to database after executing commands
+    DB_CONN.commit()
 
 """
 Retrieves and displays all records from the students table.
