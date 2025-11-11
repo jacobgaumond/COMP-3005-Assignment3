@@ -57,6 +57,9 @@ def deleteStudent(student_id):
     # Format the query string
     db_query = "DELETE FROM students WHERE student_id = '" + student_id + "';"
 
+    # Execute the query
+    executeQuery(db_query)
+
 """
 Helper function used to prompt a user for function argument values.
 """
