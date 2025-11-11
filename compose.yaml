@@ -1,0 +1,9 @@
+services:
+  assignment-3-postgres-container:
+    image: postgres:14.19
+    volumes:
+      - type: bind
+        source: ./setup.sql
+        target: /docker-entrypoint-initdb.d/setup.sql
+    environment:
+      POSTGRES_PASSWORD: assignment-password
