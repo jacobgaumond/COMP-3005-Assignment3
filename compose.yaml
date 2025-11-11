@@ -5,5 +5,7 @@ services:
       - type: bind
         source: ./setup.sql
         target: /docker-entrypoint-initdb.d/setup.sql
+    ports:
+      - "5432:5432"
     environment:
       POSTGRES_PASSWORD: assignment-password
