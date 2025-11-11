@@ -36,7 +36,7 @@ To launch the database, use the following CLI command:
 ### Running The App
 
 Assuming the python setup command (above) has been ran, run the app with the following:
-    - `run-app.sh`
+    - `./run-app.sh`
 
 ### Database Teardown
 
